@@ -133,9 +133,9 @@ class SinglyLinkedList {
     if (index < 0 || index >= this.length) {
       return null;
     } else if (index === 0) {
-      return !!this.shift();
+      return this.shift();
     } else if (index === this.length - 1) {
-      return !!this.pop();
+      return this.pop();
     }
     let prevNode = this.get(index - 1);
     const removedNode = prevNode.next;
