@@ -24,23 +24,22 @@ class BinarySearchTree {
       while (search) {
         if (val > currentNode.val) {
           if (currentNode.right === null) {
+            currentNode.right = newNode;
             search = false;
           } else {
             currentNode = currentNode.right;
           }
         } else if (val < currentNode.val) {
           if (currentNode.left === null) {
+            currentNode.left = newNode;
             search = false;
           } else {
             currentNode = currentNode.left;
           }
         }
       }
-      val < currentNode.val
-        ? (currentNode.left = newNode)
-        : (currentNode.right = newNode);
     }
-    return tree;
+    return this;
   }
 }
 
