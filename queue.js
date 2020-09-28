@@ -12,7 +12,7 @@ class Queue {
     this.size = 0;
   }
 
-  endQueue(val) {
+  enQueue(val) {
     const newNode = new Node(val);
     if (this.size === 0) {
       this.first = newNode;
