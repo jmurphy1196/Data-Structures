@@ -12,7 +12,7 @@ class Queue {
     this.size = 0;
   }
 
-  push(val) {
+  endQueue(val) {
     const newNode = new Node(val);
     if (this.size === 0) {
       this.first = newNode;
@@ -25,7 +25,7 @@ class Queue {
     this.size += 1;
     return this;
   }
-  pop() {
+  deQueue() {
     if (this.size === 0) {
       return null;
     }
